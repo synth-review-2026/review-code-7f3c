@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.vscode/
+.idea/
+
+# Model weights
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# Clinical data and generated outputs
+data/
+outputs/
+predictions/
+runs/
+*.nii
+*.nii.gz
+*.dcm
+*.nrrd
+*.xlsx
+*.xls
+
+# Local configuration and logs
+.env
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,22 @@
+{
+  "model_name": "V12-Balanced",
+  "version": "1.1",
+  "input_normalization": "preprocessed_dhw",
+  "target_calibration": "t1_robust",
+  "input_shape_dhw": [
+    192,
+    224,
+    192
+  ],
+  "source_prior": {
+    "old_enhancer_weight": 0.5,
+    "v12_enhancer_weight": 0.5
+  },
+  "v12_gate_alpha": 0.5,
+  "checkpoints": {
+    "base_direct": "direct_unet_002500.pt",
+    "v12_finetuned": "direct_unet_000500.pt",
+    "old_enhancer": "enh_pred_v5_003500.pt",
+    "v12_enhancer": "enh_pred_v5_003875.pt"
+  }
+}

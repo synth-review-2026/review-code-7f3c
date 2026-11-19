@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "epg-synth"
+version = "1.0.0"
+description = "Reference implementation of EPG-Synth for contrast-enhanced MRI synthesis"
+requires-python = ">=3.10"
+dependencies = [
+  "torch==2.6.0",
+  "torchvision==0.21.0",
+  "numpy",
+  "scipy",
+  "nibabel",
+  "pandas",
+  "scikit-image",
+  "scikit-learn",
+  "matplotlib",
+  "tensorboard",
+  "blobfile",
+  "lpips",
+  "tqdm",
+  "monai",
+  "Pillow",
+  "openpyxl",
+]
+
+[tool.setuptools.packages.find]
+include = ["epg_synth*", "guided_diffusion*", "DWT_IDWT*"]

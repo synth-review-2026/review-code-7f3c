@@ -1,0 +1,40 @@
+{
+  "model_name": "V12-Balanced",
+  "release_version": "1.0.0",
+  "status": "frozen_final",
+  "inference_module": "epg_synth.inference",
+  "config": "configs/v12_core_config.json",
+  "parameter_count": 188352266,
+  "input_shape_dhw": [
+    192,
+    224,
+    192
+  ],
+  "fusion_rule": {
+    "source_old_enhancer_weight": 0.5,
+    "source_v12_enhancer_weight": 0.5,
+    "v12_gate_alpha": 0.5
+  },
+  "checkpoints": {
+    "old_enhancer": {
+      "filename": "enh_pred_v5_003500.pt",
+      "sha256": "78B93CDB24BE1033A6D47B3B6AB52F4B84EB74950C9144346B3EA7D87FA3EF73"
+    },
+    "v12_enhancer": {
+      "filename": "enh_pred_v5_003875.pt",
+      "sha256": "1A35C6DA8B3A8B9273E2A6858825D992420EEFB9B4759577913A1DECDB6F0BA1"
+    },
+    "base_direct": {
+      "filename": "direct_unet_002500.pt",
+      "sha256": "40F1D3FC58CE5BA2666E80D334A5B1F2BCEE644E49DC0B884A67062E9C17F83F"
+    },
+    "v12_finetuned": {
+      "filename": "direct_unet_000500.pt",
+      "sha256": "FEF4EB796463791EC9DCB94FD7D1999B9281D9FF11C8565C2F6650B865689BA8"
+    }
+  },
+  "reported_evaluation": {
+    "internal_test_cases": 89,
+    "external_cases": 118
+  }
+}

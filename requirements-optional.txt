@@ -1,0 +1,2 @@
+# Optional dependency for TensorBoard image summaries in guided_diffusion.logger.
+tensorflow>=2.16
